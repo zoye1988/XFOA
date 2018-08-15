@@ -38,7 +38,7 @@
   ],
   "window": {
     "navigationBarTextStyle": "light",
-    "navigationBarTitleText": "掌上财务通(体验版)",
+    "navigationBarTitleText": "掌上财务通",
     "navigationBarBackgroundColor": "#1296db",
     "backgroundColor": "#dbdbdb",
     "color": "#7A7E83"
@@ -59,7 +59,7 @@
         "pagePath": "pages/items/list/index",
         "iconPath": "pages/img/application.png",
         "selectedIconPath": "pages/img/application.png",
-        "text": "申请列表"
+        "text": "事前审批"
       },
       {
         "pagePath": "pages/lists/index",
@@ -71,7 +71,7 @@
         "pagePath": "pages/check/list/index",
         "iconPath": "pages/img/check.png",
         "selectedIconPath": "pages/img/check.png",
-        "text": "验收列表"
+        "text": "财务验收"
       },
       {
         "pagePath": "pages/me/index",

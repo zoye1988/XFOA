@@ -8,8 +8,19 @@ Page({
   data: {
     selectItem: 0,
     job: app.globalData.job,
-    openid:app.globalData.openid,
-    items: app.globalData.apply
+    openid: app.globalData.openid,
+    items: [
+      {
+        aid: 1,
+        title: "车辆维修",
+        code: "car",
+        time: "2018-06-10",
+        status: "comfirm",
+        dptcode: 10,
+        dptname: "马龙区消防大队",
+        editor:"邓恒靖"
+      }
+    ],
   },
 
   /**
@@ -27,21 +38,21 @@ Page({
   },
 
   itemChange: function (event) {
-    var that=this;
+    var that = this;
     var items = app.globalData.apply;
     var code = event.currentTarget.dataset.code
     this.setData({
       selectItem: code
     });
-    if(code==0){
+    if (code == 0) {
       that.setData({
         items: app.globalData.apply
       });
-    }else{
-      var _items=[];
-      var _openid=that.data.openid;
-      for(var i=0;i<items.length;i++){
-        if (items[i].openid == _openid){
+    } else {
+      var _items = [];
+      var _openid = that.data.openid;
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].openid == _openid) {
           _items.push(items[i]);
         }
       }
