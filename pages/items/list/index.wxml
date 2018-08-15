@@ -14,14 +14,14 @@
         <image src="../../img/{{item.code}}.png" class="tip3"></image>
       </view>
     </view>
-    <view class="item-50 text-left page-item page-brdL">
+    <view class="item-60 text-left page-item page-brdL">
       <view class="page-title">{{item.title}}<text>（事前审批）</text></view>
-      <view class="page-brief"><text>编辑时间：</text>{{item.time}}</view>
+      <view class="page-text"><text>编辑时间：</text>{{item.time}}</view>
       <view class="page-text"><text>所属单位：</text>{{item.dptname}}</view>
       <view class="page-text"><text>经办人员：</text>{{item.editor}}</view>
     </view>
-    <view class="item-30 text-center">
-      <image src="../../img/status_{{item.status}}.png" style='width:80px;height:80px;margin-top:-10px;opacity:0.5'></image>
+    <view class="item-20 text-center">
+      <image src="../../img/pass.png" style='width:25px;height:60px;margin-top:-3px;'></image>
     </view>
   </navigator>
 

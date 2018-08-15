@@ -12,10 +12,11 @@
   line-height: 40px;
 }
 .page-text{
-  height:20px;
-  line-height: 20px;
+  height:22px;
+  line-height: 22px;
   overflow: hidden;
-  font-size: 9pt;
+  font-size: 10pt;
+  color:#888;
 }
 .page-text-comfirm{
   font-size: 8pt;
@@ -46,11 +47,12 @@
   color:#888;
 }
 .page-items{
-  height:100px;
+  height:110px;
   background-color:#ffffff;
   margin:2px;
   margin-bottom:5px;
-  border-bottom:1px solid #cdcdcd;
+  border-bottom:1px solid #e0dede;
+  border-top:1px solid #ececec;
 }
 .page-comfirm{
   height:25px;
@@ -74,7 +76,7 @@
 }
 .page-item{
   margin-top:10px;
-  height:80px;
+  height:90px;
 }
 .page-head{
   width:100%;
@@ -100,17 +102,17 @@
 .tip3{
   height:35px;
   width:35px;
-  margin-top:30px;
+  margin-top:40px;
 }
 .page-title{
-  line-height: 20px;
+  line-height: 25px;
   font-size: 10pt;
   font-weight: bold;
 }
 .page-title text{
   line-height: 20px;
   color:black;
-  font-size: 9pt;
+  font-size: 10pt;
   font-weight: normal;
 }
 .page-brief{
