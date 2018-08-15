@@ -1,0 +1,119 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>企业基本信息</text>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/bcompany.png"></image>
+    </view>
+    <view class="item-20">
+      公司名称
+    </view>
+    <view class="item-70">
+      昆明江泰科技有限公司
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      法定代表人
+    </view>
+    <view class="item-70">
+      陈涛
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      2018-01-02
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      公司地址
+    </view>
+    <view class="item-70">
+      昆明市五华区学府路690号
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/doc.png"></image>
+    </view>
+    <view class="item-20">
+      信用号
+    </view>
+    <view class="item-70">
+      915301025971086700
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/doc.png"></image>
+    </view>
+    <view class="item-20">
+      开户银行
+    </view>
+    <view class="item-70">
+      中国银行股份有限公司昆明市江东支行
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/doc.png"></image>
+    </view>
+    <view class="item-20">
+      银行账号
+    </view>
+    <view class="item-70">
+      134024478569
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/doc.png"></image>
+    </view>
+    <view class="item-20">
+      经营范围
+    </view>
+    <view class="item-70">
+      计算机软硬件的开发及应用；计算机系统集成及综合布线；建筑智能化工程设计及施工；商务信息咨询；经济信息咨询；电子产品、普通机械及配件的销售
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/doc.png"></image>
+    </view>
+    <view class="item-20">
+      违规行为
+    </view>
+    <view class="item-70">
+      招投标中存在违法行为
+    </view>
+  </view>
+  <view class="page-body" style='border-bottom:1px solid #cdcdcd;'>
+    <view class="item-10">
+      <image class="tip" src="../../img/doc.png"></image>
+    </view>
+    <view class="item-20">
+      处罚措施
+    </view>
+    <view class="item-70">
+      禁止此企业及其法人参与消防部队所有采购项目
+    </view>
+  </view>
+
+
+</view>

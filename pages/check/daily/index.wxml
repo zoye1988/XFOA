@@ -1,0 +1,278 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>零星物质采购</text>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      编辑人员
+    </view>
+    <view class="item-70">
+      {{uname}}
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      2018-02-03
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      所属单位
+    </view>
+    <view class="item-70">
+      麒麟区消防大队
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/produce.png"></image>
+    </view>
+    <view class="item-20">
+      物资名称
+    </view>
+    <view class="item-70">
+      复印机1台
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_zm.png"></image>
+    </view>
+    <view class="item-20">
+      采购原因
+    </view>
+    <view class="item-70">
+      更换办公室老旧设备
+    </view>
+  </view>
+
+  <!--领导审批-->
+  <view class="app_title">
+    <text>验收情况</text>
+  </view>
+
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-20 ">
+        验收人
+      </view>
+      <view class="item-30 ">
+        林瑾
+      </view>
+      <view class="item-20 ">
+        单位
+      </view>
+      <view class="item-30 ">
+        麒麟区消防大队
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        联系电话
+      </view>
+      <view class="item-30 item">
+        13808741191
+      </view>
+      <view class="item-20 item">
+        职务
+      </view>
+      <view class="item-30 item">
+        一般人员
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        验收要素
+      </view>
+      <view class="item-80 item checkitem">
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          生产厂商符合要求
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          技术参数符合要求
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          质量达标
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          数量齐全
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          外观符合要求
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          入库登记
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          固定资产登记
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-20 ">
+        验收人
+      </view>
+      <view class="item-30 ">
+        鲁秋月
+      </view>
+      <view class="item-20 ">
+        单位
+      </view>
+      <view class="item-30 ">
+        麒麟区消防大队
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        联系电话
+      </view>
+      <view class="item-30 item">
+        19987405521
+      </view>
+      <view class="item-20 item">
+        职务
+      </view>
+      <view class="item-30 item">
+        一般人员
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        验收要素
+      </view>
+      <view class="item-80 item checkitem">
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          生产厂商符合要求
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          技术参数符合要求
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          质量达标
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          数量齐全
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          外观符合要求
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          入库登记
+        </view>
+        <view>
+          <image src="../../img/comfirm.png" class="tip"></image>
+          固定资产登记
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-20 ">
+        验收人
+      </view>
+      <view class="item-30 ">
+        {{uname}}
+      </view>
+      <view class="item-20 ">
+        单位
+      </view>
+      <view class="item-30 ">
+        麒麟区消防大队
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        联系电话
+      </view>
+      <view class="item-30 item">
+        {{tel}}
+      </view>
+      <view class="item-20 item">
+        职务
+      </view>
+      <view class="item-30 item">
+        一般人员
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        验收要素
+      </view>
+      <view class="item-80 item checkitem">
+        <view>
+          <checkbox/>
+          生产厂商符合要求
+        </view>
+        <view>
+          <checkbox/>
+          技术参数符合要求
+        </view>
+        <view>
+          <checkbox/>
+          质量达标
+        </view>
+        <view>
+          <checkbox/>
+          数量齐全
+        </view>
+        <view>
+          <checkbox/>
+          外观符合要求
+        </view>
+        <view>
+          <checkbox/>
+          入库登记
+        </view>
+        <view>
+          <checkbox/>
+          固定资产登记
+        </view>
+      </view>
+    </view>
+    <view class="page-body">
+        <view class="item-40 item"></view>
+        <view class="item-20 item">
+          <view class="page-comfirm" bindtap='submitBuild'>提交保存</view>
+        </view>
+        <view class="item-40 item"></view>
+      </view>
+  </view>
+
+  <!--领导审批-->
+
+
+</view>

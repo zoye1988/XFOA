@@ -1,0 +1,86 @@
+<view class="container">
+  <view class="app_title">
+    <text>银行卡列表</text>
+  </view>
+
+  <view class="page-item" wx:for="{{cards}}" wx:key="{{item.id}}">
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip {{item.band==true?'':'Hide'}}" src="../img/comfirm.png"></image>
+      </view>
+      <view class="item-60 text-left fontweight">
+        我的银行卡 {{item.id}}
+      </view>
+      <view class="item-20 text-center">
+        <view class="page-switch {{item.band==true?'Hide':''}}" data-id='{{item.id}}' bindtap='bandCard'>默认</view>
+      </view>
+      <view class="item-10"  bindtap='delCard' data-id='{{item.id}}'>
+        <image class="tip" src="../img/refuse.png"></image>
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        银行卡号
+      </view>
+      <view class="item-80 item">
+        {{item.num}}
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        开户银行
+      </view>
+      <view class="item-80 item">
+        {{item.bank}}
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        持卡人姓名
+      </view>
+      <view class="item-80 item">
+        {{item.user}}
+      </view>
+    </view>
+  </view>
+
+  <view class="app_title">
+    <text>新增银行卡</text>
+  </view>
+
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-90 text-left fontweight">
+        +新的的银行卡
+      </view>
+      <view class="item-10"  bindtap='addCard'>
+        <image class="tip page-radius2" src="../img/add.png"></image>
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        银行卡号
+      </view>
+      <view class="item-80 item">
+        <input type='text' placeholder="请输入银行卡号" placeholder-style="color:#888" bindinput="numChange"></input>
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        开户银行
+      </view>
+      <view class="item-80 item">
+        <input type='text' placeholder="请输入开户银行" placeholder-style="color:#888" bindinput="bankChange"></input>
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-20 item">
+        持卡人姓名
+      </view>
+      <view class="item-80 item">
+        {{uname}}
+      </view>
+    </view>
+  </view>
+
+</view>

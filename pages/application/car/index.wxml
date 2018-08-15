@@ -1,0 +1,191 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>车辆维修需求</text>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      编辑人员
+    </view>
+    <view class="item-70">
+      {{uname}}
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      {{date}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      所属单位
+    </view>
+    <view class="item-70">
+      {{udptname}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/card.png"></image>
+    </view>
+    <view class="item-20">
+      车辆牌照
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入车辆号牌或车辆品牌" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/modify.png"></image>
+    </view>
+    <view class="item-20">
+      故障内容
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入维修内容和故障" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/leader.png"></image>
+    </view>
+    <view class="item-20">
+      管理员
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入车辆管理员姓名" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+
+  <!--询价单-->
+  <view class="app_title">
+    <text>维修厂家及预算</text>
+  </view>
+
+  <view style='font-size:10pt;height:30px;line-height:30px;text-align:left;background-color:#ffffff;'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <text>{{item.value}}</text>
+      </radio>
+    </radio-group>
+  </view>
+
+  <!--非单一来源-->
+  <view class="{{select=='dy'?'':'Hide'}}">
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          定点维修
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修单位
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入维修名称" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          报价金额
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入报价金额" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修方案
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入维修方案" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--单一来源-->
+  <view class="{{select=='fdy'?'':'Hide'}}">
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          非定点维修
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修单位
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入维修名称" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          报价金额
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入报价金额" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          非定点原因
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入非定点维修原因" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修方案
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入维修方案" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!--审批环节-->
+  <view class="app_title">
+    <text>审批环节</text>
+  </view>
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-20">
+        审批级别
+      </view>
+      <view class="item-80">
+        <picker bindchange="accountChange" value="{{jcode}}" range="{{joblist}}">
+          <view class="page-radius">{{joblist[jcode]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!--审批环节-->
+
+  <button type="primary" style="font-size:10pt;" bindtap='submitBuild'>提交数据</button>
+
+</view>

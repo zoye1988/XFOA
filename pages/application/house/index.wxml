@@ -1,0 +1,254 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>采购申请表</text>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      编辑人员
+    </view>
+    <view class="item-70">
+      {{uname}}
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      {{date}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      所属单位
+    </view>
+    <view class="item-70">
+      {{udptname}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/produce.png"></image>
+    </view>
+    <view class="item-20">
+      物资名称
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入物质名称" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_zm.png"></image>
+    </view>
+    <view class="item-20">
+      采购原因
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入采购原因或用途" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+  <!--修缮需求-->
+  <view class="app_title">
+    <text>修缮需求</text>
+  </view>
+  <view>
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          修缮需求
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修位置
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入维修位置" placeholder-style="color:#888" bindinput="companyChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修内容
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入维修内容" placeholder-style="color:#888" bindinput="companyChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          重复维修
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="如存在同一位置重复维修，请说明原因" placeholder-style="color:#888" bindinput="companyChange"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--询价单-->
+  <view class="app_title">
+    <text>修理询价表</text>
+  </view>
+  <!--非单一来源-->
+  <view>
+    <view class="page-item" wx:for="{{cards}}" wx:key="{{item.id}}">
+      <view class="page-body">
+        <view class="item-90 text-left fontweight">
+          询价单标号 {{item.id}}
+        </view>
+        <view class="item-10" bindtap='delCard' data-id='{{item.id}}'>
+          <image class="tip" src="../../img/refuse.png"></image>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          单位名称
+        </view>
+        <view class="item-80 item">
+          {{item.company}}
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          联系人员
+        </view>
+        <view class="item-80 item">
+          {{item.leader}}
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          联系电话
+        </view>
+        <view class="item-80 item">
+          {{item.tel}}
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          报价金额
+        </view>
+        <view class="item-80 item">
+          {{item.total}}
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          询价方式
+        </view>
+        <view class="item-80 item">
+          {{item.pay}}
+        </view>
+      </view>
+    </view>
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-90 fontweight">
+          非单一来源询价单
+        </view>
+        <view class="item-10">
+          <view class="page-comfirm" bindtap='addCard'>
+            <image class="tip" src="../../img/add.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          询价单位
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入公司名称" placeholder-style="color:#888" bindinput="companyChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          联系人员
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入联系人姓名" placeholder-style="color:#888" bindinput="leaderChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          联系电话
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入联系电话" placeholder-style="color:#888" bindinput="telChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          报价金额
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入报价金额" placeholder-style="color:#888" value='{{total}}' bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          询价方式
+        </view>
+        <view class="item-80 item">
+          <picker bindchange="paymentChange" value="{{pindex}}" range="{{payment}}">
+            <view class="page-radius">{{payment[pindex]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--审批环节-->
+  <view class="app_title">
+    <text>采购意见</text>
+  </view>
+  <view>
+    <view class="page-body">
+      <view class="item-20 item">
+        采购意见
+      </view>
+      <view class="item-80 item">
+        <input type='text' placeholder="请输入采购意见" value='' placeholder-style="color:#888" bindinput="telChange"></input>
+      </view>
+    </view>
+  </view>
+
+  <!--审批环节-->
+  <view class="app_title">
+    <text>审批环节</text>
+  </view>
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-20">
+        审批级别
+      </view>
+      <view class="item-80">
+        <picker bindchange="accountChange" value="{{jcode}}" range="{{joblist}}">
+          <view class="page-radius">{{joblist[jcode]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!--审批环节-->
+
+  <button type="primary" style="font-size:10pt;" bindtap='submitBuild'>提交数据</button>
+
+
+
+
+
+</view>

@@ -1,0 +1,358 @@
+<view class="container">
+  <view class="page-head page-body">
+    <view class="item-33" bindtap='itemChange' data-code='0'>
+      <text class="{{selectItem==0 ? 'fontcolor' : 'nofontcolor'}}">基本信息</text>
+    </view>
+    <view class="item-33 page-border" bindtap='itemChange' data-code='1'>
+      <text class="{{selectItem==1 ? 'fontcolor' : 'nofontcolor'}}">审批环节</text>
+    </view>
+    <view class="item-33 page-border" bindtap='itemChange' data-code='2'>
+      <text class="{{selectItem==2 ? 'fontcolor' : 'nofontcolor'}}">相关附件</text>
+    </view>
+  </view>
+  <!--基本信息-->
+  <view class="{{selectItem==0 ? '' : 'Hide'}}">
+    <view class="app_title">
+      <text>基本信息</text>
+    </view>
+
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/me.png"></image>
+      </view>
+      <view class="item-20">
+        编辑人员
+      </view>
+      <view class="item-70">
+        {{target.uname}}
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/_time.png"></image>
+      </view>
+      <view class="item-20">
+        编辑时间
+      </view>
+      <view class="item-70">
+        {{target.time}}
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/_dpt.png"></image>
+      </view>
+      <view class="item-20">
+        所属单位
+      </view>
+      <view class="item-70">
+        {{target.dptname}}
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/_sp.png"></image>
+      </view>
+      <view class="item-20">
+        审批类别
+      </view>
+      <view class="item-70">
+        <view class="">{{target.approve_name}}</view>
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/_title.png"></image>
+      </view>
+      <view class="item-20">
+        开支内容
+      </view>
+      <view class="item-70">
+        {{target.title}}
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/_je.png"></image>
+      </view>
+      <view class="item-20">
+        审批金额
+      </view>
+      <view class="item-70">
+        ¥{{target.total}}
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/_zm.png"></image>
+      </view>
+      <view class="item-20">
+        账目类别
+      </view>
+      <view class="item-70">
+        {{target.account}}
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="item-10">
+        <image class="tip" src="../../img/_zf.png"></image>
+      </view>
+      <view class="item-20">
+        支付类别
+      </view>
+      <view class="item-70">
+        {{target.pay}}
+      </view>
+    </view>
+
+    <!--经费结算单-->
+    <view class="app_title">
+      <text>经费结算信息</text>
+    </view>
+
+    <view>
+      <view class="page-item">
+        <view class="page-body">
+          <view class="item-100 fontweight">
+            经费结算信息
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            开支内容
+          </view>
+          <view class="item-70 item">
+            {{target.title}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            开支金额
+          </view>
+          <view class="item-70 item">
+            ¥{{target.total}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            金额大写
+          </view>
+          <view class="item-70 item">
+            {{target.CN}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--收款单位信息-->
+    <view class="app_title">
+      <text>收付款信息</text>
+    </view>
+
+    <view>
+      <view class="page-item">
+        <view class="page-body">
+          <view class="item-100 fontweight">
+            收付款信息
+          </view>
+        </view>
+        <view>
+          <view class="page-body">
+            <view class="item-30 item">
+              付款单位名称
+            </view>
+            <view class="item-70 item">
+              {{target.postCompany}}
+            </view>
+          </view>
+          <view class="page-body">
+            <view class="item-30 item">
+              付款单位账号
+            </view>
+            <view class="item-70 item">
+              {{target.postNum}}
+            </view>
+          </view>
+          <view class="page-body">
+            <view class="item-30 item">
+              开户银行(付款)
+            </view>
+            <view class="item-70 item">
+              {{target.postBank}}
+            </view>
+          </view>
+        </view>
+        <view class="{{false==true?'':'Hide'}}">
+          <view class="page-body">
+            <view class="item-30 item">
+              付款个人名称
+            </view>
+            <view class="item-70 item">
+              {{target.get}}
+            </view>
+          </view>
+          <view class="page-body">
+            <view class="item-30 item">
+              付款个人账号
+            </view>
+            <view class="item-70 item">
+              {{ant.personNum}}
+            </view>
+          </view>
+          <view class="page-body">
+            <view class="item-30 item">
+              开户银行(付款)
+            </view>
+            <view class="item-70 item">
+              {{ant.personBank}}
+            </view>
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            收款单位名称
+          </view>
+          <view class="item-70 item">
+            {{target.getCompany}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            收款单位账号
+          </view>
+          <view class="item-70 item">
+            {{target.getNum}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            开户银行(收款)
+          </view>
+          <view class="item-70 item">
+            {{target.getBank}}
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <!--审批环节-->
+  <view class=" {{selectItem==1 ?  '' : 'Hide'}}">
+    <view class="app_title">
+      <text>审批列表</text>
+    </view>
+    <view class="page-body" wx:for="{{target.rules}}" wx:key="{{item.id}}" style='border-radius:10px;border:1px solid #cdcdcd;line-height:25px;'>
+      <view class="item-15 text-center line">
+        <image src='../../img/comfirm.png' class="tip3 {{item.approve_status=='comfirm'?'':'Hide'}}"></image>
+        <image src='../../img/refuse.png' class="tip3 {{item.approve_status=='refuse'?'':'Hide'}}"></image>
+      </view>
+      <view class="item-70 text-left text-bottom">
+        <view class="page-text">
+          <text>时间：</text>{{item.rtime}}</view>
+        <view class="page-text">
+          <text style="color:#1296db">{{item.jobname}}：</text>{{item.uname}}</view>
+        <view class="page-text">
+          <text>审批意见：</text>{{item.msg}}</view>
+      </view>
+      <view class="item-15 text-center text-result ">
+        <text class="{{item.approve_status=='comfirm'?'':'Hide'}}">通过</text>
+        <text class="{{item.approve_status=='refuse'?'':'Hide'}}">驳回</text>
+      </view>
+    </view>
+    <view class="app_title">
+      <text>审批意见</text>
+    </view>
+    <view class="page-body" style='height:60px;'>
+      <view class="item-100 text-left page-item">
+        <textarea placeholder="我的审批意见" placeholder-style="color:#888;" />
+      </view>
+    </view>
+    <view class="page-body">
+      <view class="item-25 text-center">
+        <view class="page-comfirm">同意</view>
+      </view>
+      <view class="item-25 text-center">
+        <view class="page-refuse">驳回</view>
+      </view>
+    </view>
+
+  </view>
+
+  <!--相关附件-->
+  <view class="{{selectItem==2 ?  '' : 'Hide'}}">
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-10">
+          <image class="tip" src="../../img/temp.png"></image>
+        </view>
+        <view class="item-80 text-left" style='padding-left:10px;'>
+          事前申请记录
+        </view>
+        <view class="item-10">
+          <image class="tip" src="../../img/forward.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-body page-bottom page-head">
+      <view class="item-40 text-center">
+        <text>文件类别</text>
+      </view>
+      <view class="item-60 text-center page-border">
+        <text>附件列表</text>
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="item-40 text-center ">
+        <view class="options" wx:for="{{target.docs}}" wx:key="{{item.id}}" data-did='{{item.did}}' bindtap='changeSelect'>
+          {{item.docname}}
+          <image src="../../img/tip.png" class="tip4 {{imgItem==item.did?'':'Hide'}}"></image>
+        </view>
+      </view>
+      <view class="item-60 page-border text-left">
+        <view style='width:100%;margin-top:5px;'>
+          <view class="page-files" wx:for="{{imgs}}" wx:key="{{item.id}}">
+            <image src='{{item}}' class="fileimg" mode="aspectFill" data-src="{{item}}" bindtap='previewImage'></image>
+          </view>
+        </view>
+        <!--编辑-->
+
+        <view style='margin:10px;width:100%;border-top:1px solid #cdcdcd;'>
+          <view class="imgDiv {{editer==openid?'':'Hide'}}">
+            <view style="text-align:left;color:#B2B2B2;font-size:10pt;">{{files.length}}/{{countIndex}}</view>
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files">
+                <view wx:for="{{files}}" wx:for-item="image">
+                  <view class="weui-uploader__file">
+                    <image mode="aspectFill" class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage2"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+
+        <view class="item-25 text-center">
+          <view class="page-comfirm">保存</view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

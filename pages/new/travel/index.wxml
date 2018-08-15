@@ -1,0 +1,383 @@
+<view class="container">
+  <view class="app_title">
+    <text>基本信息</text>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      编辑人员
+    </view>
+    <view class="item-70">
+      {{uname}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      {{date}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      所属单位
+    </view>
+    <view class="item-70">
+      {{udptname}}
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_sp.png"></image>
+    </view>
+    <view class="item-20">
+      审批类别
+    </view>
+    <view class="item-70">
+      <view class="">{{approve_name}}</view>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_title.png"></image>
+    </view>
+    <view class="item-20">
+      开支内容
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入内容标题" placeholder-style="color:#888" value="{{title}}" bindinput="titleChange"></input>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_je.png"></image>
+    </view>
+    <view class="item-20">
+      审批金额
+    </view>
+    <view class="item-70">
+      ¥{{total}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_zm.png"></image>
+    </view>
+    <view class="item-20">
+      账目类别
+    </view>
+    <view class="item-70">
+      <picker bindchange="accountChange" value="{{aindex}}" range="{{account}}">
+        <view class="page-radius">{{account[aindex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_zf.png"></image>
+    </view>
+    <view class="item-20">
+      支付类别
+    </view>
+    <view class="item-70">
+      <picker bindchange="paymentChange" value="{{pindex}}" range="{{payment}}">
+        <view class="page-radius">{{payment[pindex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="app_title">
+    <text>公务出差情况</text>
+  </view>
+
+  <view>
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          公务出差情况
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          出差地点
+        </view>
+        <view class="item-70 item">
+          云南昆明
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          外出时间
+        </view>
+        <view class="item-70 item">
+          2018-02-23
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          返回时间
+        </view>
+        <view class="item-70 item">
+          2018-02-25
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          出差原因
+        </view>
+        <view class="item-70 item">
+          参加总队后勤会议
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          同行人数
+        </view>
+        <view class="item-70 item">
+          3人
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          出行方式
+        </view>
+        <view class="item-70 item">
+          驾车
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <!--经费结算单-->
+  <view class="app_title">
+    <text>人员交通费</text>
+  </view>
+
+  <view>
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-80 fontweight">
+          人员交通费
+        </view>
+        <view class="item-20">
+          单据张数
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          车船票
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" placeholder-style="color:#888" value='{{car}}' data-code='car' bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          飞机票
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" value='{{air}}' data-code='air' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          订退票
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" data-code='back' value='{{back}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          未卧补助
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" data-code='train' value='{{train}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          市内交通费
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" data-code='taxi' value='{{taxi}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          交通保险
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" data-code='safe' value='{{safe}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="app_title">
+    <text>伙食补助费</text>
+  </view>
+
+  <view>
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-80 fontweight">
+          伙食、住宿补助费
+        </view>
+        <view class="item-20">
+          单据张数
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          住宿费
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" data-code='hotal' value='{{hotal}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          住勤伙食补助
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" data-code='foot' value='{{foot}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          误餐补助
+        </view>
+        <view class="item-50 item">
+          <input type='text' placeholder="请输入金额" data-code='snack' value='{{snack}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+        <view class="item-20 item">
+          <input type='text' placeholder="" value="0" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          途中伙食补助
+        </view>
+        <view class="item-70 item">
+          3人x2天x100元/天=¥{{travel}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!--收款单位信息-->
+  <view class="app_title">
+    <text>收款信息</text>
+  </view>
+
+  <view>
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          收款信息
+        </view>
+      </view>
+      <view>
+        <view class="page-body">
+          <view class="item-30 item">
+            收款个人名称
+          </view>
+          <view class="item-70 item">
+            {{ant.personName}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            收款个人账号
+          </view>
+          <view class="item-70 item">
+            {{ant.personNum}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            开户银行(收款)
+          </view>
+          <view class="item-70 item">
+            {{ant.personBank}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            总金额
+          </view>
+          <view class="item-70 item">
+            ¥{{total}}
+          </view>
+        </view>
+        <view class="page-body">
+          <view class="item-30 item">
+            金额大写
+          </view>
+          <view class="item-70 item">
+            {{CN}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <button type="primary" style="font-size:10pt;" bindtap='submitBuild'>提交数据</button>
+  </view>
+
+  <view class="text-left" style='width:95%;margin:0 auto;border:1px solid #cdcdcd;border-radius:8px;background-color:#fbdcd5;padding:5px;'>
+    <view class="page-title">相关说明:</view>
+    <view style='font-size:9pt;color:#888;'>
+
+      <text>1、系统会根据用户填写内容，在后台自动生成《重大经费开支报告表》、《经费结算单》、《差旅费报账凭证》、《公务卡报账审批单》、《银行存款支付审批单》等;\n</text>
+      <text>2、请认真填写表格，审批中无法进行修改;\n</text>
+      <text>3、麒麟、经开、罗平、会泽、宣威，金额≥30000元，属于重大经费审批;\n</text>
+      <text>4、富源、马龙、陆良、师宗、特勤，金额≥20000元，属于重大经费审批;\n</text>
+    </view>
+  </view>
+</view>

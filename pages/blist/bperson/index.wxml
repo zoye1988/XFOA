@@ -1,0 +1,83 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>个人基本信息</text>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/bperson.png"></image>
+    </view>
+    <view class="item-20">
+      姓名
+    </view>
+    <view class="item-70">
+      陈涛
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+    </view>
+    <view class="item-20">
+      身份证号
+    </view>
+    <view class="item-70">
+      530302198810090327
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+    </view>
+    <view class="item-20">
+      所属性别
+    </view>
+    <view class="item-70">
+      男
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+    </view>
+    <view class="item-20">
+      所属民族
+    </view>
+    <view class="item-70">
+      汉族
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+
+    </view>
+    <view class="item-20">
+      居住地址
+    </view>
+    <view class="item-70">
+      昆明市五华区学府路690号
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+
+    </view>
+    <view class="item-20">
+      违规行为
+    </view>
+    <view class="item-70">
+      在支队2016年信息化招投标中存在违规行为
+    </view>
+  </view>
+  <view class="page-body" style='border-bottom:1px solid #cdcdcd;'>
+    <view class="item-10">
+
+    </view>
+    <view class="item-20">
+      处罚措施
+    </view>
+    <view class="item-70">
+      禁止此人参与消防部队所有的采购项目
+    </view>
+  </view>
+
+
+</view>

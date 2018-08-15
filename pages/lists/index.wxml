@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="page-head page-body">
+    <view class="item-25" bindtap='itemChange' data-code='0'>
+      <text class="{{selectItem==0 ? 'fontcolor' : 'nofontcolor'}}">全部</text>
+    </view>
+    <view class="item-25 page-border" bindtap='itemChange' data-code='1'>
+      <text class="{{selectItem==1 ? 'fontcolor' : 'nofontcolor'}}">已通过</text>
+    </view>
+    <view class="item-25 page-border" bindtap='itemChange' data-code='2'>
+      <text class="{{selectItem==2 ? 'fontcolor' : 'nofontcolor'}}">已驳回</text>
+    </view>
+    <view class="item-25 page-border" bindtap='itemChange' data-code='3'>
+      <text class="{{selectItem==3 ? 'fontcolor' : 'nofontcolor'}}">待审批</text>
+    </view>
+  </view>
+
+  <view class="page-items" wx:for="{{items}}" wx:key="{{item.id}}" data-code='{{item.code}}' data-id='{{item.id}}' bindtap='getDetail'>
+    <view class="item-20 text-left">
+      <view style='width:25px;height:25px;'>
+        <image src="../img/new.png" class="tip2 {{item.isnew ? '' : 'Hide'}}"></image>
+      </view>
+      <view class="text-center">
+        <image src="../img/{{item.code}}.png" class="tip3"></image>
+      </view>
+    </view>
+    <view class="item-50 text-left page-item">
+      <view class="page-title">{{item.title}}</view>
+      <view class="page-brief">{{item.time}}</view>
+      <view class="page-text"><text>所属单位：</text>{{item.dptname}}</view>
+      <view class="page-text"><text>审批金额：</text>¥{{item.totals}}</view>
+    </view>
+    <view class="item-30 text-center">
+      <view class="page-comfirm {{item.job==job ? '' : 'Hide'}}">同意</view>
+      <view class="page-refuse {{item.job==job ? '' : 'Hide'}}">驳回</view>
+      <image class="{{item.job==job ? 'Hide' : ''}}" src="../img/status_{{item.status}}.png" style='width:80px;height:80px;margin-top:-10px;'></image>
+    </view>
+  </view>
+
+  
+
+
+
+</view>

@@ -1,0 +1,257 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>车辆维修需求</text>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      编辑人员
+    </view>
+    <view class="item-70">
+      邓恒靖
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      2018-06-22
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      所属单位
+    </view>
+    <view class="item-70">
+      马龙区消防大队
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/card.png"></image>
+    </view>
+    <view class="item-20">
+      车辆牌照
+    </view>
+    <view class="item-70">
+      0705X
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/modify.png"></image>
+    </view>
+    <view class="item-20">
+      故障内容
+    </view>
+    <view class="item-70">
+      发动机故障
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/leader.png"></image>
+    </view>
+    <view class="item-20">
+      管理员
+    </view>
+    <view class="item-70">
+      王飞
+    </view>
+  </view>
+
+  <!--询价单-->
+  <view class="app_title">
+    <text>维修厂家及预算</text>
+  </view>
+
+  <!--非单一来源-->
+  <view class="{{select=='dy'?'':'Hide'}}">
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          定点维修
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修单位
+        </view>
+        <view class="item-80 item">
+          马龙区韵达修理厂
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          报价金额
+        </view>
+        <view class="item-80 item">
+          ¥1982.03
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修方案
+        </view>
+        <view class="item-80 item">
+          对车辆进行整体整修
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--单一来源-->
+  <view class="{{select=='fdy'?'':'Hide'}}">
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          非定点维修
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修单位
+        </view>
+        <view class="item-80 item">
+          昆明市恒莱特车辆保养公司
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          报价金额
+        </view>
+        <view class="item-80 item">
+          ¥8820.00
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          非定点原因
+        </view>
+        <view class="item-80 item">
+          外出公差，无法返回
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          维修方案
+        </view>
+        <view class="item-80 item">
+          对车辆进行整体整修
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!--领导审批-->
+  <view class="app_title">
+    <text>领导审批情况</text>
+  </view>
+
+  <view class="{{apply.job==jobtitle?'Hide':''}}">
+    
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          审批意见
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          审批领导
+        </view>
+        <view class="item-30 item">
+          {{apply.leader}}
+        </view>
+        <view class="item-20 item">
+          审批等级
+        </view>
+        <view class="item-30 item">
+          {{apply.job}}
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          审批意见
+        </view>
+        <view class="item-80 item">
+          {{apply.answer}}
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          审批时间
+        </view>
+        <view class="item-80 item">
+          {{apply.atime}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="{{apply.job==jobtitle&& apply.status=='waiting'?'':'Hide'}}">
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          审批意见
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          审批领导
+        </view>
+        <view class="item-30 item">
+          {{uname}}
+        </view>
+        <view class="item-20 item">
+          审批级别
+        </view>
+        <view class="item-30 item">
+          {{oil.jobtitle}}
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-20 item">
+          审批意见
+        </view>
+        <view class="item-80 item">
+          <input type='text' placeholder="请输入审批意见" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-10 item"></view>
+        <view class="item-30 item">
+          <view class="page-comfirm">同意</view>
+        </view>
+        <view class="item-20 item"></view>
+        <view class="item-30 item">
+          <view class="page-refuse">驳回</view>
+        </view>
+        <view class="item-10 item"></view>
+      </view>
+    </view>
+  </view>
+  <!--领导审批-->
+  <!--财务审批-->
+  <navigator url="../../new/default/index?code=travel&id=1" class="page-comfirm {{apply.status=='comfirm'?'':'Hide'}}">财务审批</navigator>
+  <view class="page-refuse {{apply.status=='waiting'?'':'Hide'}}">取消操作</view>
+  <!--财务审批-->
+
+
+</view>

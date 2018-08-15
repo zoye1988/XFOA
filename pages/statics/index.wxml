@@ -1,0 +1,187 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>本月业务经费支出统计</text>
+  </view>
+  <canvas class="canvas" canvas-id="canvas1"></canvas>
+  <!--非单一来源-->
+  <view >
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 text-left fontweight">
+          水电费
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          水费
+        </view>
+        <view class="item-40 item">
+          ¥2184.00
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          电费
+        </view>
+        <view class="item-40 item">
+          ¥6300.00
+        </view>
+      </view>
+    </view>
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 text-left fontweight">
+          邮电费
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          通信服务费
+        </view>
+        <view class="item-40 item">
+          ¥4207.38
+        </view>
+      </view>
+    </view>
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 text-left fontweight">
+          差旅费
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          差旅费
+        </view>
+        <view class="item-40 item">
+          ¥3680.00
+        </view>
+      </view>
+    </view>
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 text-left fontweight">
+          维修（护）费
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          业务用房修缮费
+        </view>
+        <view class="item-40 item">
+          ¥178201.68
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          装备维修管理费
+        </view>
+        <view class="item-40 item">
+          ¥70123.88
+        </view>
+      </view>
+    </view>
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 text-left fontweight">
+          培训费
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          培训费
+        </view>
+        <view class="item-40 item">
+          ¥300.00
+        </view>
+      </view>
+    </view>
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 text-left fontweight">
+          专用燃料费
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          专用燃料费
+        </view>
+        <view class="item-40 item">
+          ¥13624.70
+        </view>
+      </view>
+    </view>
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 text-left fontweight">
+          其他业务费
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          医疗费
+        </view>
+        <view class="item-40 item">
+          ¥13329.69
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          执法办案费
+        </view>
+        <view class="item-40 item">
+          ¥21000.00
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          银行手续费
+        </view>
+        <view class="item-40 item">
+          ¥36.00
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          办公费
+        </view>
+        <view class="item-40 item">
+          ¥17068.00
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          执勤补助
+        </view>
+        <view class="item-40 item">
+          ¥5620.00
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          高危补助
+        </view>
+        <view class="item-40 item">
+          ¥25600.00
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-60 item">
+          其他杂项支出
+        </view>
+        <view class="item-40 item">
+          ¥32972.50
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

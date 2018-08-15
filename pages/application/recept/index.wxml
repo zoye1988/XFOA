@@ -1,0 +1,162 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>公务接待审批表</text>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      编辑人员
+    </view>
+    <view class="item-70">
+      {{uname}}
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      {{date}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      承办单位
+    </view>
+    <view class="item-70">
+      {{udptname}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/leader.png"></image>
+    </view>
+    <view class="item-20">
+      接待对象
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入接待对象及职级" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/write.png"></image>
+    </view>
+    <view class="item-20">
+      接待事由
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入接待原因" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/plan.png"></image>
+    </view>
+    <view class="item-20">
+      行程安排
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入行程安排" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+
+  <view>
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100  fontweight">
+          接待标准限额
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          接待地点
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入接待地点或企业名称" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          接待人数
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入接待人数和陪餐人数" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          餐费明细预算
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入金额" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          住宿费明细预算
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入金额" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          其他费明细预算
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入金额" placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-10 item">
+          <image class="tip" src="../../img/_je.png"></image>
+        </view>
+        <view class="item-20 item">
+          合计金额
+        </view>
+        <view class="item-70 item">
+          ¥ {{total}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--审批环节-->
+  <view class="app_title">
+    <text>审批环节</text>
+  </view>
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-30">
+        审批级别
+      </view>
+      <view class="item-70">
+        <picker bindchange="accountChange" value="{{jcode}}" range="{{joblist}}">
+          <view class="page-radius">{{joblist[jcode]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!--审批环节-->
+
+  <button type="primary" style="font-size:10pt;" bindtap='submitBuild'>提交数据</button>
+
+
+
+
+
+</view>

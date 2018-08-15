@@ -1,0 +1,78 @@
+<view class="container">
+  <view class="page-items">
+    <view class="item-20 text-left">
+      <view style='height:25px;width:25px;'>
+
+      </view>
+      <view class="text-center">
+        <image src="../img/{{code}}.png" class="tip4"></image>
+      </view>
+    </view>
+    <view class="item-50 text-left page-item">
+      <view class="page-title">{{approve_name}}</view>
+      <view class="page-brief">{{time}}</view>
+      <view class="page-text">
+        <text>所属单位：</text>{{udptname}}</view>
+      <view class="page-text">
+        <text>审批金额：</text>¥{{total}}</view>
+    </view>
+    <view class="item-30 text-center">
+      <image src="../img/status_{{status}}.png" style='width:80px;height:80px;margin-top:-10px;'></image>
+    </view>
+  </view>
+
+
+  <view class="page-body page-bottom page-head">
+    <view class="item-40 text-center">
+      <text>文件类别</text>
+    </view>
+    <view class="item-60 text-center page-border">
+      <text>附件列表</text>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-40 text-center ">
+      <view class="options" wx:for="{{docs}}" wx:key="{{item.id}}" data-did='{{item.did}}' bindtap='changeSelect'>
+        {{item.docname}}
+        <image src="../img/tip.png" class="tip2 {{selected==item.did?'':'Hide'}}"></image>
+      </view>
+    </view>
+    <view class="item-60 page-border text-left">
+      <view style='width:100%;margin-top:5px;'>
+        <view class="page-files" wx:for="{{imgs}}" wx:key="{{item.id}}">
+          <image src='{{item}}' class="fileimg" mode="aspectFill" data-src="{{item}}" bindtap='previewImage'></image>
+          <image src="../img/refuse.png" class="tip3 {{editer==openid?'':'Hide'}}" data-name='{{item}}' bindtap='deleteImg'></image>
+        </view>
+      </view>
+      <!--编辑-->
+
+      <view style='margin:10px;width:100%;border-top:1px solid #cdcdcd;'>
+        <view class="imgDiv {{editer==openid?'':'Hide'}}">
+          <view style="text-align:left;color:#B2B2B2;font-size:10pt;">{{files.length}}/{{countIndex}}</view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files">
+              <view wx:for="{{files}}" wx:for-item="image">
+                <view class="weui-uploader__file">
+                  <image mode="aspectFill" class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage2"></image>
+                </view>
+              </view>
+            </view>
+            <view class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+          
+        </view>
+      </view>
+
+      <view class="item-20 text-center">
+        <view class="page-comfirm">提交</view>
+      </view>
+
+    </view>
+  </view>
+
+
+
+</view>

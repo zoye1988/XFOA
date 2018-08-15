@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/lists/index",
+    "pages/me/index",
+    "pages/detail/default/index",
+    "pages/detail/travel/index",
+    "pages/files/index",
+    "pages/new/default/index",
+    "pages/draft/index",
+    "pages/register/index",
+    "pages/application/daily/index",
+    "pages/application/medicine/index",
+    "pages/application/recept/index",
+    "pages/application/car/index",
+    "pages/application/oil/index",
+    "pages/items/list/index",
+    "pages/items/car/index",
+    "pages/items/daily/index",
+    "pages/items/medicine/index",
+    "pages/items/oil/index",
+    "pages/items/house/index",
+    "pages/items/recept/index",
+    "pages/items/travel/index",
+    "pages/application/travel/index",
+    "pages/check/list/index",
+    "pages/check/car/index",
+    "pages/check/daily/index",
+    "pages/new/travel/index",
+    "pages/card/index",
+    "pages/check/paper/index",
+    "pages/application/house/index",
+    "pages/check/house/index",
+    "pages/blist/list/index",
+    "pages/blist/bcompany/index",
+    "pages/blist/bperson/index",
+    "pages/statics/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "light",
+    "navigationBarTitleText": "掌上财务通(体验版)",
+    "navigationBarBackgroundColor": "#1296db",
+    "backgroundColor": "#dbdbdb",
+    "color": "#7A7E83"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/img/home.png",
+        "selectedIconPath": "pages/img/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/items/list/index",
+        "iconPath": "pages/img/application.png",
+        "selectedIconPath": "pages/img/application.png",
+        "text": "申请列表"
+      },
+      {
+        "pagePath": "pages/lists/index",
+        "iconPath": "pages/img/list.png",
+        "selectedIconPath": "pages/img/list.png",
+        "text": "财务审批"
+      },
+      {
+        "pagePath": "pages/check/list/index",
+        "iconPath": "pages/img/check.png",
+        "selectedIconPath": "pages/img/check.png",
+        "text": "验收列表"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "pages/img/me.png",
+        "selectedIconPath": "pages/img/me.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

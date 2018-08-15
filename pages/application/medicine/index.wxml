@@ -1,0 +1,78 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>转（诊）院审批表</text>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      编辑人员
+    </view>
+    <view class="item-70">
+      {{uname}}
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      {{date}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      所属单位
+    </view>
+    <view class="item-70">
+      {{udptname}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/doc.png"></image>
+    </view>
+    <view class="item-20">
+      病情说明
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入病情说明" placeholder-style="color:#888" bindinput="totalChange"></input>
+    </view>
+  </view>
+
+  <!--审批环节-->
+  <view class="app_title">
+    <text>审批环节</text>
+  </view>
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-30">
+        审批级别
+      </view>
+      <view class="item-70">
+        <picker bindchange="accountChange" value="{{jcode}}" range="{{joblist}}">
+          <view class="page-radius">{{joblist[jcode]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!--审批环节-->
+
+  <button type="primary" style="font-size:10pt;" bindtap='submitBuild'>提交数据</button>
+
+
+
+
+
+</view>

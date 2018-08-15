@@ -1,0 +1,68 @@
+<view class="container">
+  <!--个人信息-->
+  <view class="mehead">
+    <view class="list_flex-wrp" style="flex-direction:row;">
+      <view class="flex-item item-25">
+        <image src="{{uimg}}"></image>
+      </view>
+      <view class="flex-item mename item-75">
+        <text style="font-weight:bold;color:#fff;font-size:10pt;">{{uname}}</text>
+        <text style='color:#fff;font-size:9pt;'> [ 大队领导 ]\n</text>
+        <text>麒麟区消防大队\n</text>
+        <text>最后登录:2018-07-03 14:15:33</text>
+      </view>
+    </view>
+  </view>
+  <view class="department">
+    <view class="list_flex-wrp" style="flex-direction:row;">
+      <view class="flex-item item-20">
+        <image src='../img/person.png' class="tip2"></image>
+      </view>
+      <view class="flex-item item-50">
+        更新用户
+      </view>
+      <view class="flex-item item-20">
+        <view class="page-radius" style='text-align:center;'>点击更新</view>
+      </view>
+    </view>
+  </view>
+  <navigator class="department" url="../draft/index">
+    <view class="list_flex-wrp" style="flex-direction:row;">
+      <view class="flex-item item-20">
+        <image src='../img/produce.png' class="tip2"></image>
+      </view>
+      <view class="flex-item item-70">
+        草稿箱（2）
+      </view>
+      <view class="flex-item item-10">
+          <image src='../img/forward.png' class="tip"></image>
+      </view>
+    </view>
+  </navigator>
+  <navigator class="department" url="../card/index">
+    <view class="list_flex-wrp" style="flex-direction:row;">
+      <view class="flex-item item-20">
+        <image src='../img/cards.png' class="tip2"></image>
+      </view>
+      <view class="flex-item item-70">
+        我的公务卡
+      </view>
+      <view class="flex-item item-10">
+          <image src='../img/forward.png' class="tip"></image>
+      </view>
+    </view>
+  </navigator>
+  <navigator class="department" url="../check/paper/index">
+    <view class="list_flex-wrp" style="flex-direction:row;">
+      <view class="flex-item item-20">
+        <image src='../img/eye.png' class="tip2"></image>
+      </view>
+      <view class="flex-item item-70">
+        发票验证查询
+      </view>
+      <view class="flex-item item-10">
+          <image src='../img/forward.png' class="tip"></image>
+      </view>
+    </view>
+  </navigator>
+</view>

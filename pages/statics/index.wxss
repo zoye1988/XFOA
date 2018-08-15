@@ -1,0 +1,77 @@
+/* pages/statics/index.wxss */
+.canvas {
+    height: 420px;
+    width:100vh;
+    top:0;
+}
+.page-body{
+  height:30px;
+  background-color:#ffffff;
+  margin:2px;
+  line-height: 30px;
+}
+.page-body text{
+  color:#888;
+  height:30px;
+}
+.item{
+  border-top:1px solid #cdcdcd;
+  text-align: center;
+}
+.page-item{
+  width:95%;
+  border:1px solid #cdcdcd;
+  border-radius: 10px;
+  margin:5px auto;
+  padding:0px 5px;
+  background-color:#ffffff;
+}
+.page-head{
+  width:100%;
+  height:30px;
+  background-color:#ffffff;
+  color:#1296db;
+  margin-bottom:5px;
+}
+.item-20{
+  border-right:1px solid #cdcdcd;
+}
+.page-head text{
+  line-height: 30px;
+  font-size: 10pt;
+  padding-left: 10px;
+  
+}
+.tip{
+  height:20px;
+  width:20px;
+  margin-top:5px;
+}
+.tip2{
+  height:20px;
+  width:15px;
+  margin-top:10px;
+}
+.tip3{
+  height:40px;
+  width:40px;
+}
+.page-title{
+  line-height: 20px;
+  font-size: 10pt;
+}
+.page-brief{
+  height:20px;
+  line-height: 20px;
+  font-size: 9pt;
+  overflow: hidden;
+  color:#8a8a8a;
+}
+.page-comfirm{
+  font-size:10pt;
+  height:30px;
+  line-height: 30px;
+}
+.item-60{
+  border-right:1px solid #cdcdcd;
+}

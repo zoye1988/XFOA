@@ -1,0 +1,250 @@
+<view class="container">
+  <!--申请表-->
+  <view class="app_title">
+    <text>加油审批</text>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/me.png"></image>
+    </view>
+    <view class="item-20">
+      经办人
+    </view>
+    <view class="item-70">
+      {{uname}}
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_time.png"></image>
+    </view>
+    <view class="item-20">
+      编辑时间
+    </view>
+    <view class="item-70">
+      {{date}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_dpt.png"></image>
+    </view>
+    <view class="item-20">
+      所属单位
+    </view>
+    <view class="item-70">
+      {{udptname}}
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/card.png"></image>
+    </view>
+    <view class="item-20">
+      车辆牌照
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入车辆号牌或车辆品牌" value="{{card}}" placeholder-style="color:#888" bindinput="cardChange"></input>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/_title.png"></image>
+    </view>
+    <view class="item-20">
+      车辆类型
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入车辆类型"  value="{{ctype}}" placeholder-style="color:#888" bindinput="ctypeChange"></input>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="item-10">
+      <image class="tip" src="../../img/kilometer.png"></image>
+    </view>
+    <view class="item-20">
+      车辆里程
+    </view>
+    <view class="item-70">
+      <input type='text' placeholder="请输入加油时行驶里程(公里）" value='{{kilometer}}' placeholder-style="color:#888" bindinput="kilometerChange"></input>
+    </view>
+  </view>
+
+  <!--询价单-->
+  <view class="app_title">
+    <text>加油情况及预算</text>
+  </view>
+
+  <view style='font-size:10pt;height:30px;line-height:30px;text-align:left;background-color:#ffffff;'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <text>{{item.value}}</text>
+      </radio>
+    </radio-group>
+  </view>
+
+  <!--非单一来源-->
+  <view class="{{select=='dy'?'':'Hide'}}">
+
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          定点加油
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          油品类别
+        </view>
+        <view class="item-70 item">
+          <picker bindchange="oilChange" value="{{pindex}}" range="{{oil}}">
+            <view class="page-radius">{{oil[pindex]}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          数量（升）
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入加油数量（升）" value='{{num}}' placeholder-style="color:#888" bindinput="numChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          加油金额
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入加油金额" value='{{total}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!--单一来源-->
+  <view class="{{select=='fdy'?'':'Hide'}}">
+    <view class="page-item">
+      <view class="page-body">
+        <view class="item-100 fontweight">
+          非定点加油
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          油品类别
+        </view>
+        <view class="item-70 item">
+          <picker bindchange="paymentChange" value="{{pindex}}" range="{{oil}}">
+            <view class="page-radius">{{oil[pindex]}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          数量（升）
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入加油数量（升）" value='{{num}}' placeholder-style="color:#888" bindinput="numChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          加油金额
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入加油金额" value='{{total}}' placeholder-style="color:#888" bindinput="totalChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          外出时间
+        </view>
+        <view class="item-70 item">
+          <picker mode="date" value="{{begin}}" bindchange="beginDateChange">
+            <view class="picker">
+             {{begin}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          返回时间
+        </view>
+        <view class="item-70 item">
+          <picker mode="date" value="{{end}}" bindchange="endDateChange">
+            <view class="picker">
+              {{end}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          到达地点
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入非定点加油到达地点" placeholder-style="color:#888" value='{{place}}' bindinput="placeChange"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          非定点加油原因
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入非定点加油原因" placeholder-style="color:#888" value='{{uoilreason}}'  bindinput="uoilreason"></input>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view>
+    <view class="page-item">
+
+      <view class="page-body">
+        <view class="item-30">
+          非车用油原因
+        </view>
+        <view class="item-70">
+          <input type='text' placeholder="请输入非车辆用油原因" placeholder-style="color:#888" value='{{ucarusereason}}' bindinput="ucarusereason"></input>
+        </view>
+      </view>
+      <view class="page-body">
+        <view class="item-30 item">
+          非车用油用途
+        </view>
+        <view class="item-70 item">
+          <input type='text' placeholder="请输入非车辆用油用途" placeholder-style="color:#888" value='{{ucarusefun}}' bindinput="ucarusefun"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--审批环节-->
+  <view class="app_title">
+    <text>审批环节</text>
+  </view>
+  <view class="page-item">
+    <view class="page-body">
+      <view class="item-30">
+        审批级别
+      </view>
+      <view class="item-70">
+        <picker bindchange="jobChange" value="{{jcode}}" range="{{joblist}}">
+          <view class="page-radius">{{joblist[jcode]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!--审批环节-->
+
+  <button type="primary" style="font-size:10pt;" bindtap='submitBuild'>提交数据</button>
+
+</view>

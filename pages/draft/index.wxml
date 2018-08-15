@@ -1,0 +1,23 @@
+<view class="container">
+
+  <navigator class="page-items" url='../detail/index?id={{item.id}}' wx:for="{{items}}" wx:key="{{item.id}}">
+    <view class="item-20 text-left">
+      <view style='width:25px;height:25px;'>
+        
+      </view>
+      <view class="text-center">
+        <image src="../img/{{item.code}}.png" class="tip3"></image>
+      </view>
+    </view>
+    <view class="item-70 text-left page-item">
+      <view class="page-title">{{item.title}}</view>
+      <view class="page-brief">{{item.time}}</view>
+      <view class="page-text"><text>所属单位：</text>{{item.dptname}}</view>
+      <view class="page-text"><text>审批金额：</text>¥{{item.totals}}</view>
+    </view>
+    <view class="item-10 text-right">
+      <image src="../img/caogao.png" style="width:40px;height:40px;"></image>
+    </view>
+  </navigator>
+  
+</view>

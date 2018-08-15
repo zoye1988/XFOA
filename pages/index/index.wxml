@@ -1,0 +1,156 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-items2" >
+    <view class="item-20" bindtap='forward' data-code='items/list'>
+      <view class="page-item2">
+        <image src="../img/application2.png" class="tip4"></image>
+        <view class="page-title">事前申请</view>
+      </view>
+    </view>
+    <view class="item-20" bindtap='forward' data-code='lists'>
+      <view class="page-item2" >
+        <image src="../img/list2.png" class="tip4"></image>
+        <view class="page-title">财务审批</view>
+      </view>
+    </view>
+    <view class="item-20" bindtap='forward' data-code='check/list'>
+      <view class="page-item2">
+        <image src="../img/check2.png" class="tip4"></image>
+        <view class="page-title">财务验收</view>
+      </view>
+    </view>
+    <navigator class="item-20" url="../blist/list/index">
+      <view class="page-item2">
+        <image src="../img/blackdata.png" class="tip4"></image>
+        <view class="page-title">黑名单</view>
+      </view>
+    </navigator>
+    <navigator class="item-20" url="../statics/index">
+      <view class="page-item2">
+        <image src="../img/statistics.png" class="tip4"></image>
+        <view class="page-title">经费统计</view>
+      </view>
+    </navigator>
+  </view>
+
+  <!--快捷连接-->
+  <view class="page-items">
+    <navigator class="item-25" url="../application/oil/index">
+      <view class="page-item">
+        <image src="../img/oil.png" class="tip"></image>
+        <view class="page-title">车辆油料</view>
+      </view>
+    </navigator>
+    <navigator class="item-25" url="../application/daily/index">
+      <view class="page-item">
+        <image src="../img/daily.png" class="tip"></image>
+        <view class="page-title">零星采购</view>
+      </view>
+    </navigator>
+    <navigator class="item-25" url="../application/car/index">
+      <view class="page-item">
+        <image src="../img/car.png" class="tip"></image>
+        <view class="page-title">车辆维修</view>
+      </view>
+    </navigator>
+    <navigator class="item-25" url="../application/recept/index">
+      <view class="page-item">
+        <image src="../img/recept.png" class="tip"></image>
+        <view class="page-title">公务接待</view>
+      </view>
+    </navigator>
+  </view>
+  <view class="page-items">
+    <navigator class="item-25" url="../application/medicine/index">
+      <view class="page-item">
+        <image src="../img/medicine.png" class="tip"></image>
+        <view class="page-title">疾病医疗</view>
+      </view>
+    </navigator>
+    <navigator class="item-25" url="../application/travel/index">
+      <view class="page-item">
+        <image src="../img/travel.png" class="tip"></image>
+        <view class="page-title">公务出差</view>
+      </view>
+    </navigator>
+    <navigator class="item-25" url="../application/house/index">
+      <view class="page-item">
+        <image src="../img/house.png" class="tip"></image>
+        <view class="page-title">房屋维修</view>
+      </view>
+    </navigator>
+  </view>
+
+
+  <view class="page-body {{msg_comfirm!=0 ? '' : 'Hide'}}" bindtap='forward' data-code='lists'>
+    <view class="item-20 text-center">
+      <image src="../img/comfirm.png" class="tip3"></image>
+    </view>
+    <view class="item-70 text-left">
+      <view class="page-title">审核通过提示</view>
+      <view class="page-brief">有
+        <text>{{msg_comfirm}}</text> 条申请通过审批</view>
+    </view>
+    <view class="item-10 text-right">
+      <image src="../img/forward.png" class="tip2"></image>
+    </view>
+  </view>
+
+  <view class="page-body {{msg_refuse!=0 ? '' : 'Hide'}}" bindtap='forward' data-code='lists'>
+    <view class="item-20 text-center">
+      <image src="../img/refuse.png" class="tip3"></image>
+    </view>
+    <view class="item-70 text-left">
+      <view class="page-title">审核驳回提示</view>
+      <view class="page-brief">有
+        <text>{{msg_refuse}}</text> 条申请未通过审批</view>
+    </view>
+    <view class="item-10 text-right">
+      <image src="../img/forward.png" class="tip2"></image>
+    </view>
+  </view>
+
+  <view class="page-body {{msg_waiting!=0 ? '' : 'Hide'}}" bindtap='forward' data-code='lists'>
+    <view class="item-20 text-center">
+      <image src="../img/waiting.png" class="tip3"></image>
+    </view>
+    <view class="item-70 text-left">
+      <view class="page-title">审核等待提示</view>
+      <view class="page-brief">有
+        <text>{{msg_waiting}}</text> 条申请正在审批中</view>
+    </view>
+    <view class="item-10 text-right">
+      <image src="../img/forward.png" class="tip2"></image>
+    </view>
+  </view>
+
+</view>
+
+<view class="welcome {{ustatus?'Hide':''}}"></view>
+<view class="note {{ustatus?'Hide':''}}">
+  <view class="default">
+    <swiper style='margin-top:40%;' indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <swiper-item>
+        <view class="AD text-center">
+          <image src="../img/kj.png" style='width:100px;height:100px;'></image>
+          <view style='font-size:15pt;font-weight:bolder;color:white;line-height:50px;'>业务工作数字化</view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="AD text-center">
+          <image src="../img/dz.png" style='width:100px;height:100px;'></image>
+          <view style='font-size:15pt;font-weight:bolder;color:white;line-height:50px;'>审批流程规范化</view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="AD text-center">
+          <image src="../img/lc.png" style='width:100px;height:100px;'></image>
+          <view style='font-size:15pt;font-weight:bolder;color:white;line-height:50px;'>财务审批高效化</view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view style='width:100%;height:20%;text-align:center;margin-top:10%;'>
+      <button type='primary' open-type='getUserInfo' style="background-color:#ffffff;color:black;" bindtap='register'>注册使用</button>
+    </view>
+  </view>
+</view>

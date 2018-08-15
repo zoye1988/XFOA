@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="page-head page-body">
+    <view class="item-50" bindtap='itemChange' data-code='0'>
+      <text class="{{selectItem==0 ? 'fontcolor' : 'nofontcolor'}}">全部列表</text>
+    </view>
+    <view class="item-50 page-border" bindtap='itemChange' data-code='1'>
+      <text class="{{selectItem==1 ? 'fontcolor' : 'nofontcolor'}}">我的申请</text>
+    </view>
+  </view>
+
+  <navigator class="page-items" url='../{{item.code}}/index?link={{item.link}}&&aid={{item.aid}}' wx:for="{{items}}" wx:key="{{item.id}}">
+    <view class="item-20 text-left">
+      <view class="text-center">
+        <image src="../../img/{{item.code}}.png" class="tip3"></image>
+      </view>
+    </view>
+    <view class="item-50 text-left page-item">
+      <view class="page-title">{{item.title}}</view>
+      <view class="page-brief">{{item.time}}</view>
+      <view class="page-text"><text>所属单位：</text>{{item.dptname}}</view>
+    </view>
+    <view class="item-30 text-center">
+      <image src="../../img/status_{{item.status}}.png" style='width:80px;height:80px;margin-top:-10px;opacity:0.5'></image>
+    </view>
+  </navigator>
+
+  
+
+
+
+</view>
