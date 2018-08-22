@@ -15,9 +15,20 @@ Page({
         title: "车辆维修",
         code: "car",
         time: "2018-06-10",
+        status:'pass',
         dptcode: 10,
         dptname: "马龙区消防大队",
         editor:"邓恒靖"
+      },
+      {
+        aid: 2,
+        title: "车辆加油",
+        code: "oil",
+        time: "2018-06-14",
+        status: 'wait',
+        dptcode: 10,
+        dptname: "马龙区消防大队",
+        editor: "邓恒靖"
       }
     ],
   },
@@ -38,14 +49,14 @@ Page({
 
   itemChange: function (event) {
     var that = this;
-    var items = app.globalData.apply;
+    var items = this.data.items;
     var code = event.currentTarget.dataset.code
     this.setData({
       selectItem: code
     });
     if (code == 0) {
       that.setData({
-        items: app.globalData.apply
+        items: that.data.items
       });
     } else {
       var _items = [];

@@ -16,7 +16,8 @@ App({
     homedate: "2000-10-01 09:00:00",//首页登录时间
     msg_comfirm: 2,
     msg_refuse: 1,
-    msg_waiting: 0, //系统的消息提示
+    pay_comfirm:2,
+    pay_refuse:2,
     welcome: false, //显示欢迎页面
     joblist: ['大队领导', '部门领导', '支队副职领导', '支队主官'],
     account: {

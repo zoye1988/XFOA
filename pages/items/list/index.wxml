@@ -21,12 +21,8 @@
       <view class="page-text"><text>经办人员：</text>{{item.editor}}</view>
     </view>
     <view class="item-20 text-center">
-      <image src="../../img/{{item.status}}.png" style='width:25px;height:60px;margin-top:-3px;'></image>
+      <image src="../../img/{{item.status}}.png" style='width:25px;height:60px;margin-top:-5px;'></image>
     </view>
   </navigator>
-
-  
-
-
 
 </view>

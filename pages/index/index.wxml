@@ -87,7 +87,7 @@
       <image src="../img/comfirm.png" class="tip3"></image>
     </view>
     <view class="item-70 text-left">
-      <view class="page-title">审核通过提示</view>
+      <view class="page-title">事前审核通过提示</view>
       <view class="page-brief">有
         <text>{{msg_comfirm}}</text> 条申请通过审批</view>
     </view>
@@ -98,10 +98,10 @@
 
   <view class="page-body {{msg_refuse!=0 ? '' : 'Hide'}}" bindtap='forward' data-code='lists'>
     <view class="item-20 text-center">
-      <image src="../img/refuse.png" class="tip3"></image>
+      <image src="../img/refused.png" class="tip3"></image>
     </view>
     <view class="item-70 text-left">
-      <view class="page-title">审核驳回提示</view>
+      <view class="page-title">事前审核驳回提示</view>
       <view class="page-brief">有
         <text>{{msg_refuse}}</text> 条申请未通过审批</view>
     </view>
@@ -110,14 +110,28 @@
     </view>
   </view>
 
-  <view class="page-body {{msg_waiting!=0 ? '' : 'Hide'}}" bindtap='forward' data-code='lists'>
+  <view class="page-body {{msg_comfirm!=0 ? '' : 'Hide'}}" bindtap='forward' data-code='lists'>
     <view class="item-20 text-center">
-      <image src="../img/waiting.png" class="tip3"></image>
+      <image src="../img/comfirm.png" class="tip3"></image>
     </view>
     <view class="item-70 text-left">
-      <view class="page-title">审核等待提示</view>
+      <view class="page-title">财务审核通过提示</view>
       <view class="page-brief">有
-        <text>{{msg_waiting}}</text> 条申请正在审批中</view>
+        <text>{{pay_comfirm}}</text> 条申请通过审批</view>
+    </view>
+    <view class="item-10 text-right">
+      <image src="../img/forward.png" class="tip2"></image>
+    </view>
+  </view>
+
+  <view class="page-body {{msg_refuse!=0 ? '' : 'Hide'}}" bindtap='forward' data-code='lists'>
+    <view class="item-20 text-center">
+      <image src="../img/refused.png" class="tip3"></image>
+    </view>
+    <view class="item-70 text-left">
+      <view class="page-title">财务审核驳回提示</view>
+      <view class="page-brief">有
+        <text>{{pay_refuse}}</text> 条申请未通过审批</view>
     </view>
     <view class="item-10 text-right">
       <image src="../img/forward.png" class="tip2"></image>
