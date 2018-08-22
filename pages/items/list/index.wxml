@@ -16,12 +16,21 @@
     </view>
     <view class="item-60 text-left page-item page-brdL">
       <view class="page-title">{{item.title}}<text>（事前审批）</text></view>
+<<<<<<< HEAD
       <view class="page-text"><text>编辑时间：</text>{{item.time}}</view>
       <view class="page-text"><text>所属单位：</text>{{item.dptname}}</view>
       <view class="page-text"><text>经办人员：</text>{{item.editor}}</view>
     </view>
     <view class="item-20 text-center">
       <image src="../../img/pass.png" style='width:25px;height:60px;margin-top:-3px;'></image>
+=======
+      <view class="page-brief"><text>编辑时间：</text>{{item.time}}</view>
+      <view class="page-brief"><text>所属单位：</text>{{item.dptname}}</view>
+      <view class="page-brief"><text>经办人员：</text>{{item.editor}}</view>
+    </view>
+    <view class="item-20 text-center">
+      <image src="../../img/{{item.status}}.png" style='width:25px;height:60px;margin-top:-3px;'></image>
+>>>>>>> c400470c4c0a9456b10c5f2cd08a11ff9c665219
     </view>
   </navigator>
 
