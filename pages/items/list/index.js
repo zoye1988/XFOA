@@ -15,7 +15,7 @@ Page({
         title: "车辆维修",
         code: "car",
         time: "2018-06-10",
-        status: "comfirm",
+        status: "pass",
         dptcode: 10,
         dptname: "马龙区消防大队",
         editor:"邓恒靖"
