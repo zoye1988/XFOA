@@ -29,6 +29,26 @@ Page({
         dptcode: 10,
         dptname: "马龙区消防大队",
         editor: "邓恒靖"
+      },
+      {
+        aid: 3,
+        title: "公务接待",
+        code: "recept",
+        time: "2018-06-14",
+        status: 'refuse',
+        dptcode: 10,
+        dptname: "马龙区消防大队",
+        editor: "邓恒靖"
+      },
+      {
+        aid: 4,
+        title: "零星采购",
+        code: "daily",
+        time: "2018-06-14",
+        status: 'refuse',
+        dptcode: 10,
+        dptname: "马龙区消防大队",
+        editor: "邓恒靖"
       }
     ],
   },

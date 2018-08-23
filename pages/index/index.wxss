@@ -1,23 +1,19 @@
 .container{
-  background-color:#ffffff;
+  
 }
 .page-body{
   height:40px;
   background-color:#ffffff;
   margin:2px;
-  margin-top:2px;
-  margin-bottom:5px;
   padding:5px;
-  border:1px solid #1296db;
+  border:1px solid #cfcfcf;
   border-radius: 10px;
 }
 .page-body text{
   color:red;
 }
 .page-items{
-  margin:2px;
-  margin-top:5px;
-  margin-bottom:5px;
+  margin:1px;
   text-align: center;
   border-bottom:1px solid #ececec;
 }
@@ -29,9 +25,9 @@
 .page-item{
   height:70px;
   border-right:1px solid #ececec;
-  margin:2px;
+  margin:1px;
   margin-top:0;
-  padding:0px 5px;
+  padding-top:10px;
   background-color:#ffffff;
 }
 .page-item2{

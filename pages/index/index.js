@@ -6,7 +6,8 @@ Page({
   data: {
     msg_comfirm: app.globalData.msg_comfirm,
     msg_refuse: app.globalData.msg_refuse,
-    msg_waiting: app.globalData.msg_waiting,
+    pay_comfirm: app.globalData.pay_comfirm,
+    pay_refuse: app.globalData.pay_refuse,
     ustatus: app.globalData.ustatus,
     indicatorDots: false,
     vertical: false,

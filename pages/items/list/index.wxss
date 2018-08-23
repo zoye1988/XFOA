@@ -50,7 +50,7 @@
   height:110px;
   background-color:#ffffff;
   margin:2px;
-  margin-bottom:5px;
+  margin-bottom:4px;
   border-bottom:1px solid #e0dede;
   border-top:1px solid #ececec;
 }
